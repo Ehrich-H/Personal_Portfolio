@@ -1,0 +1,59 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    display: grid;
+    grid-template-areas: 
+    "header header header"
+    "welcome welcome welcome"
+    "aside contact aside2"
+    "projects projects projects";
+}
+#navbar{
+    grid-area: header;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+    background-color: whitesmoke;
+}
+a{
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+#welcome-section{
+    grid-area: welcome;
+    text-align: center;
+    padding: 20px;
+}
+#contract{
+    grid-area: contact;
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    align-items: center;
+}
+.projects{
+    grid-area: projects;
+    display: flex;
+    justify-content: space-around;
+    margin: 15px;
+}
+.project-tile{
+box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+padding: 20px;
+margin: 10px;
+}
+[type="email"], textarea{
+    width: 100%;
+    margin: 10px;
+}
+[type="submit"]{
+    width: 50px;
+}
+@media screen and (max-width:900px){
+ #projects{
+ flex-direction: column;   
+}
+}
